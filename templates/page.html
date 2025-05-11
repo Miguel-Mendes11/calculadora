@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    <h1><center>Calculadora de Juros Compostos</center></h1><br>
+    <form method="post"><center>
+        Valor Inicial: <input type="number" step="0.01" name="valor_inicial" required><br>
+        Taxa de Juros (%): <input type="number" step="0.01" name="taxa_juros" required><br>
+        Tempo (meses ou anos): <input type="number" name="tempo" required><br>
+        <input type="submit" value="Calcular">
+        </center>
+    </form>
+
+    {% if resultado is not none %}
+        <h2><center>Resultado: R$ {{ resultado | round(2) }}</center></h2>
+    {% endif %}
+</body>
+</html>
